@@ -17,12 +17,12 @@ export class ItemService {
   },{
     id: uuid(),
     name: 'loremItem2',
-    price: 9500,
+    price: 2500,
     qty: 10
   },{
     id: uuid(),
     name: 'loremItem3',
-    price: 7500,
+    price: 3000,
     qty: 10
   }];
 
@@ -34,9 +34,11 @@ export class ItemService {
     this.items.push(newItem);
   }
 
-  deleteItemById( id:string ) {
+  deleteItemById( id:string ):void {
     this.items = this.items.filter( items => items.id !== id );
   }
 
-
+  getItemInfoById(id: string): Item | undefined {
+    return this.items.find(item => item.id === id);
+  }
 }
