@@ -7,6 +7,8 @@ import { HeroesModule } from './heroes/heroes.module';
 
 import { AppComponent } from './app.component';
 
+import { ItemViewModule } from './item-view/item-view.module';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { AppComponent } from './app.component';
     CounterModule,
     HeroesModule,
     DbzModule,
+    ItemViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

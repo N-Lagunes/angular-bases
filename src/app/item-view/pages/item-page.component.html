@@ -1,0 +1,13 @@
+<h1>Items List</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <!-- onDelete -->
+    <item-list [itemList]="items"
+              (onDelete)="onDeleteItem($event)"></item-list>
+  </div>
+  <div class="col">
+    <!-- add-character -->
+    <item-add-item (onNewItem)="onNewItem($event)" ></item-add-item>
+  </div>
+</div>
