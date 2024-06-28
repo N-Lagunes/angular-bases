@@ -11,25 +11,29 @@ export class ItemService {
 
   public items: Item[] = [{
     id: uuid(),
-    name: 'loremItem1',
-    price: 1000,
+    name: 'AHOOK',
+    price: 5,
     qty: 10
   },{
     id: uuid(),
-    name: 'loremItem2',
-    price: 2500,
+    name: 'BANDAIDS',
+    price: 12,
     qty: 10
   },{
     id: uuid(),
-    name: 'loremItem3',
-    price: 3000,
+    name: 'BEEF',
+    price: 50,
     qty: 10
   }];
 
 
   addItem( item: Item ):void {
 
-    const newItem: Item = { id: uuid(), ...item };
+    const newItem: Item = { id: uuid(), 
+      name:item.name.toUpperCase(),
+      price:item.price,
+      qty:item.qty
+    };
 
     this.items.push(newItem);
   }
